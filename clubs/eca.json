@@ -1,0 +1,44 @@
+{
+    "name": "ECA",
+    "fullName":"Extra-Curricular Association",
+    "description": "The ECA provides services for the Boston Latin School club community, helping clubs establish a presence and brand identity through posters and websites",
+    "times":{
+        "description": "Weekly attendence expected, either Tuesdays at 8pm, or Wednesdays at 2:15pm room 137"
+        "weekly": {
+            "Monday": {"meet":false},
+            "Tuesday": {"meet":true, "time": "8pm", "link": "https://example.com"},
+            "Wednesday": {"meet":true, "time": "2:15pm", "description": "Room 137"},
+            "Thursday": {"meet":false},
+            "Friday": {"meet":false},
+            "Saturday": {"meet":false},
+            "Sunday": {"meet":false}
+        }
+    },
+    "links": [
+        {
+            "name":"Discord",
+            "description": "join our server!",
+            "link":"https://discord.gg/t6WMBBAwBM"
+        }
+    ],
+    "faculty": "Dr. Mordine",
+    "Leadership": {
+        "description": "2 Co-Presidents, officers for specific tasks and duties chosen each year",
+        "categories": [
+            {
+                "name": "Presidents",
+                "members": [
+                    {
+                        "name": "Tony Zhang",
+                        "position": "Co-Founder"
+                    },
+                    {
+                        "name": "Adi Acosta",
+                        "position": "Co-Founder"
+                    }
+                ]
+            }
+        ]
+    }
+
+}
