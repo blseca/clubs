@@ -6,8 +6,8 @@
         "description": "Weekly attendence expected, either Tuesdays at 8pm, or Wednesdays at 2:15pm room 137",
         "weekly": {
             "Monday": {"meet":false},
-            "Tuesday": {"meet":true, "time": "8pm", "link": "https://example.com"},
-            "Wednesday": {"meet":true, "time": "2:15pm", "description": "Room 137"},
+            "Tuesday": {"meet":true, "time": "8pm", "url": "https://example.com"},
+            "Wednesday": {"meet":true, "time": "2:15pm", "room": 137},
             "Thursday": {"meet":false},
             "Friday": {"meet":false},
             "Saturday": {"meet":false},
@@ -18,7 +18,7 @@
         {
             "name":"Discord",
             "description": "join our server!",
-            "link":"https://discord.gg/t6WMBBAwBM"
+            "url":"https://discord.gg/t6WMBBAwBM"
         }
     ],
     "faculty": "Dr. Mordine",
