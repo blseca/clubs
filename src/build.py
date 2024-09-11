@@ -73,7 +73,7 @@ def clubTimesHTML(club):
 def formatMeetingInfo(day,time):
     if not time['meet']: 
         return ''
-    return f"<p>{day} &#149; {time['time']} { ' &#149; Room ' + str(time['room']) if 'room' in time else ''} { ' &#149; <a href=' + str(time['url']) + '>Join</a>' if 'url' in time else ''}</p>"
+    return f"<p>{day} &#149; {time['time']} { ' &#149; Room ' + str(time['room']) if 'room' in time else ''} { ' &#149; <a href=' + str(time['url']) + '>Join meeting</a>' if 'url' in time else ''}</p>"
 
 def clubLinkHTML(club):
     for link in club['links']:

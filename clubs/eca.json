@@ -1,7 +1,7 @@
 {
     "name": "ECA",
     "fullName":"Extra-Curricular Association",
-    "description": "The ECA provides services for the Boston Latin School club community, helping clubs establish a presence and brand identity through posters and websites",
+    "description": "Marketing, Design, and Website Club",
     "times":{
         "description": "Weekly attendence expected, either Tuesdays at 8pm, or Wednesdays at 2:15pm room 137",
         "weekly": {
@@ -39,6 +39,10 @@
                 ]
             }
         ]
+    },
+    "homepage": {
+        "title": "Welcome to the ECA!",
+        "body": "The ECA provides services for the Boston Latin School club community, helping clubs establish a presence and brand identity through posters and websites",
+        "image": ""
     }
-
 }

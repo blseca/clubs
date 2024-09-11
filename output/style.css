@@ -13,22 +13,24 @@ body {
     max-width: 700px;
     margin: 0 auto;
     padding: 2em;
+    /* font-size: 3vmin; */
 }
 header {
     text-align: right;
 }
 
 header h1{
-    font-size: 5em;
+    font-size: 4em;
     margin: 0;
+    line-height: 1;
 }
 
 header p.description{
     font-size: 1em;
     font-style: italic;
-    opacity: 0.8;
+    opacity: 0.5;
     text-transform: none;
-    margin: 0.5em 0;
+    margin-bottom: 1.5em;
 }
 
 header p{
