@@ -22,27 +22,32 @@
         }
     ],
     "faculty": "Dr. Mordine",
-    "Leadership": {
-        "description": "2 Co-Presidents, officers for specific tasks and duties chosen each year",
-        "categories": [
+    "pages": [
             {
-                "name": "Presidents",
-                "members": [
+                "name": "Welcome",
+                "title": "Welcome to the ECA!",
+                "body": "The ECA provides services for the Boston Latin School club community, helping clubs establish a presence and brand identity through posters and websites",
+                "image": ""
+            },
+            {
+                "name": "Officers",
+                "description": "2 Co-Presidents, officers for specific tasks and duties chosen each year",
+                "categories": [
                     {
-                        "name": "Tony Zhang",
-                        "position": "Co-Founder"
-                    },
-                    {
-                        "name": "Adi Acosta",
-                        "position": "Co-Founder"
+                        "name": "Presidents",
+                        "members": [
+                            {
+                                "name": "Tony Zhang",
+                                "position": "Co-Founder"
+                            },
+                            {
+                                "name": "Adi Acosta",
+                                "position": "Co-Founder"
+                            }
+                        ]
                     }
                 ]
             }
-        ]
-    },
-    "homepage": {
-        "title": "Welcome to the ECA!",
-        "body": "The ECA provides services for the Boston Latin School club community, helping clubs establish a presence and brand identity through posters and websites",
-        "image": ""
-    }
+    ]
+    
 }

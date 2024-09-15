@@ -34,9 +34,10 @@ def generate_club_pages():
         club_dir = 'output/' + club['name'].replace(' ','_')
         if not os.path.exists(club_dir):
             os.makedirs(club_dir)
-            
-        with open(club_dir + '/index.html','w') as file:
-            file.write(generate_club_page(club))
+
+        for page in club['pages']:
+            with open(club_dir + '/' + page['name'] + '.html','w') as file:
+                file.write(generate_club_page(club))
 
 def rootHTML(title,content):
     return f"""<!DOCTYPE html>
@@ -73,11 +74,10 @@ def clubTimesHTML(club):
 def formatMeetingInfo(day,time):
     if not time['meet']: 
         return ''
-    return f"<p>{day} &#149; {time['time']} { ' &#149; Room ' + str(time['room']) if 'room' in time else ''} { ' &#149; <a href=' + str(time['url']) + '>Join meeting</a>' if 'url' in time else ''}</p>"
+    return f"<p>{day} &#149; {time['time']} { ' &#149; Room ' + str(time['room']) if 'room' in time else ''} { ' &#149; <a href=' + str(time['url']) + '>Join online meeting</a>' if 'url' in time else ''}</p>"
 
 def clubLinkHTML(club):
     for link in club['links']:
         return f"<p><a href='{link['url']}' title='{link['description']}'>{link['name']}</a></p>"
-
 
 generate_club_pages()
