@@ -24,9 +24,13 @@ ensure_directories()
 
 clubs = read_json_files()
 
-def generate_club_page(club):
+def generate_page(club, pageNum):
     title = club['name']
-    return rootHTML(title,headerHTML(club))
+    return rootHTML(title,
+                    headerHTML(club) + 
+                    navbarHTML(club, pageNum) +
+                    contentHTML(club, pageNum)
+                    )
 
 def generate_club_pages():
     # loop through clubs and generate subdirectories with index.html files
@@ -35,9 +39,10 @@ def generate_club_pages():
         if not os.path.exists(club_dir):
             os.makedirs(club_dir)
 
-        for page in club['pages']:
+        for pageNum in range(len(club['pages'])):
+            page = club['pages'][pageNum]
             with open(club_dir + '/' + page['name'] + '.html','w') as file:
-                file.write(generate_club_page(club))
+                file.write(generate_page(club, pageNum))
 
 def rootHTML(title,content):
     return f"""<!DOCTYPE html>
@@ -79,5 +84,28 @@ def formatMeetingInfo(day,time):
 def clubLinkHTML(club):
     for link in club['links']:
         return f"<p><a href='{link['url']}' title='{link['description']}'>{link['name']}</a></p>"
+
+def navbarHTML(club, pageNum):
+    output = ""
+    for i in range(len(club['pages'])):
+        page = club['pages'][i]
+        if i == pageNum:
+            output += f"\n\t<a href='{page['name']}.html' class='currentPage'>{page['name']}</a>"
+        else:
+            output += f"\n\t<a href='{page['name']}.html'>{page['name']}</a>"
+    return "\n<nav>" + output + "\n</nav>"
+
+def contentHTML(club, pageNum):
+    page = club['pages'][pageNum]
+    text = f"""
+        <h1>{page['title']}</h1>
+        <p>{page['body']}</p>
+    """
+    images = ""
+    for image in page['images']:
+        images += f"\n<img src='{image['url']}' alt='{image['alt']}'>"
+    return text + images 
+
+
 
 generate_club_pages()
