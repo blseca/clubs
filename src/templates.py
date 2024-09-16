@@ -13,6 +13,7 @@ def headerHTML(club):
     return f"""
 <header>
     <h1>{club['name']}</h1>
+    <a id="all-clubs" href='https://blsclubs.org/' title='BLS Clubs'>ALL CLUBS</a>
     <p class="description">{club['description']}</p>
     {clubTimesHTML(club)}
     {clubLinkHTML(club)}

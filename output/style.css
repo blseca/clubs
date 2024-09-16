@@ -22,6 +22,10 @@ img {
     margin-bottom: 1em;
 }
 
+a {
+    color: #6D2BC1;
+}
+
 body {
     /* margin: 2em 100px;  */
     max-width: 700px;
@@ -51,6 +55,18 @@ header p{
     margin: 0.5em 0;
     text-transform: uppercase;
 }
+
+
+#all-clubs{
+    padding: 0 0.5em;
+    background-color: #6D2BC1;
+    color: white;
+    position: absolute;
+    top: 2em;
+    left: 2em;
+    transform: rotate(-20deg);
+}
+
 
 nav {
     margin: 0.5em 0;
@@ -99,7 +115,6 @@ main {
         transform: translateY(0);
     }
     main {
-        /* padding: 1em; */
         margin: 0 -2em;
         border-left: none;
         border-right: none;
