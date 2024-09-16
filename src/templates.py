@@ -52,16 +52,18 @@ def navbarHTML(club, pageNum):
 def bodyHTML(club, pageNum):
     page = club['pages'][pageNum]
     output = f"""
+<main>
 <h1>{page['title']}</h1>
 <p>{page['body']}</p>
 """
     for image in page['images']:
         output += f"<img src='{image['url']}' alt='{image['alt']}'>\n"
-    return output
+    return output + "\n</main>"
 
 def officerHTML(club, pageNum):
     page = club['pages'][pageNum]
     output = f"""
+<main>
 <h2>{page['description']}</h2>
 """
     for category in page['categories']:
@@ -69,4 +71,4 @@ def officerHTML(club, pageNum):
         for member in category['members']:
             output += f"\n\t<p>{member['name']} - {member['position']}</p>"
 
-    return output
+    return output + "\n</main>"
