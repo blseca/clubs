@@ -6,7 +6,7 @@
         "description": "Weekly attendence expected, either Tuesdays at 8pm, or Wednesdays at 2:15pm room 137",
         "weekly": {
             "Monday": {"meet":false},
-            "Tuesday": {"meet":true, "time": "8pm", "url": "https://example.com"},
+            "Tuesday": {"meet":true, "time": "8pm", "url": "https://discord.gg/bGqMpq87tQ"},
             "Wednesday": {"meet":true, "time": "2:15pm", "room": 137},
             "Thursday": {"meet":false},
             "Friday": {"meet":false},
@@ -16,8 +16,13 @@
     },
     "links": [
         {
+            "name":"Instagram",
+            "description": "Follow us!",
+            "url":"https://www.instagram.com/bls.eca?igsh=OTZtYTRkcjF4ZHFj&utm_source=qr"
+        },
+        {
             "name":"Discord",
-            "description": "join our server!",
+            "description": "Join our server!",
             "url":"https://discord.gg/t6WMBBAwBM"
         }
     ],
@@ -26,13 +31,10 @@
             {
                 "name": "Welcome",
                 "title": "Welcome to the ECA!",
-                "body": "The ECA provides services for the Boston Latin School club community, helping clubs establish a presence and brand identity through posters and websites",
+                "body": "The ECA provides services for the Boston Latin School club community, helping clubs establish a presence and brand identity through posters and websites. ",
                 "images":
                 [
-                    {
-                        "url": "https://i.pinimg.com/564x/9d/4a/49/9d4a49b2b2b9392d3f844c4dbcff52d6.jpg",
-                        "alt": "Funny cat"
-                    }
+                    
                 ]
 
             },
