@@ -26,16 +26,14 @@ ensure_directories()
 clubs = read_json_files()
 
 def generate_page(club, pageNum):
-    title = club['name']
-    return templates.rootHTML(title,
+    return templates.rootHTML(club,
                     templates.headerHTML(club) + 
                     templates.navbarHTML(club, pageNum) +
                     templates.bodyHTML(club, pageNum)
                     )
 
 def generate_officer_page(club, pageNum):
-    title = club['name']
-    return templates.rootHTML(title,
+    return templates.rootHTML(club,
                     templates.headerHTML(club) + 
                     templates.navbarHTML(club, pageNum) +
                     templates.officerHTML(club, pageNum)

@@ -1,9 +1,16 @@
-def rootHTML(title,content):
+def rootHTML(club,content):
     return f"""<!DOCTYPE html>
 <html>
 <head>
-    <title>{title}</title>
+    <title>{club['name']}</title>
     <link rel="stylesheet" href="../style.css">
+    <style>
+        :root {{
+            --background-color: {club['theme']['background-color']};
+            --primary-color: {club['theme']['primary-color']};
+            --accent-color: {club['theme']['accent-color']};
+        }}
+    </style>
 </head>
 <body>{content}
 </body>
@@ -65,7 +72,7 @@ def officerHTML(club, pageNum):
     page = club['pages'][pageNum]
     output = f"""
 <main>
-<h2>{page['description']}</h2>
+<p>{page['description']}</p>
 """
     for category in page['categories']:
         output += f"\n<h3>{category['name']}</h3>"
