@@ -6,9 +6,9 @@ def rootHTML(club,content):
     <link rel="stylesheet" href="../style.css">
     <style>
         :root {{
-            --background-color: {club['theme']['background-color']};
-            --primary-color: {club['theme']['primary-color']};
-            --accent-color: {club['theme']['accent-color']};
+            {'--background-color:'+club['theme']['background-color'] if 'theme' in club else ''};
+            {'--primary-color:'+club['theme']['primary-color'] if 'theme' in club else ''};
+            {'--accent-color:'+club['theme']['accent-color'] if 'theme' in club else ''};
         }}
     </style>
 </head>
@@ -20,7 +20,7 @@ def headerHTML(club):
     return f"""
 <header>
     <h1>{club['name']}</h1>
-    <a id="all-clubs" href='https://blsclubs.org/' title='BLS Clubs'>ALL CLUBS</a>
+    <a id="all-clubs" href='/' title='BLS Clubs'>ALL CLUBS</a>
     <p class="description">{club['description']}</p>
     {clubTimesHTML(club)}
     {clubLinkHTML(club)}
@@ -37,6 +37,9 @@ def clubTimesHTML(club):
     str += formatMeetingInfo('Saturday',weekly['Saturday'])
     str += formatMeetingInfo('Sunday',weekly['Sunday'])
     return str
+
+def compactTimesHTML(club):
+    return "".join([f" <span class='compact-time'>{day}</span>" for day,info in club['times']['weekly'].items() if info['meet']])
 
 def formatMeetingInfo(day,time):
     if not time['meet']: 
@@ -80,3 +83,20 @@ def officerHTML(club, pageNum):
             output += f"\n\t<p>{member['name']} - {member['position']}</p>"
 
     return output + "\n</main>"
+
+
+def catalogHeaderHTML():
+    return """
+<header>
+<h1>Boston Latin School Clubs</h1>
+<p>Search here for a list of all clubs at blsclubs.org</p>
+</header>
+"""
+
+def catalogHTML(clubs):
+    output = ""
+    for club in clubs:
+        name = club['name']
+        clubInfoHTML = f"<a class='club-item' href='{name}'><h3>{name}</h3><p>{club['description']}{compactTimesHTML(club)}</p><a>"
+        output += clubInfoHTML
+    return output

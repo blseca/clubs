@@ -27,20 +27,28 @@ clubs = read_json_files()
 
 def generate_page(club, pageNum):
     return templates.rootHTML(club,
-                    templates.headerHTML(club) + 
-                    templates.navbarHTML(club, pageNum) +
-                    templates.bodyHTML(club, pageNum)
-                    )
+        templates.headerHTML(club) + 
+        templates.navbarHTML(club, pageNum) +
+        templates.bodyHTML(club, pageNum)
+    )
 
 def generate_officer_page(club, pageNum):
     return templates.rootHTML(club,
-                    templates.headerHTML(club) + 
-                    templates.navbarHTML(club, pageNum) +
-                    templates.officerHTML(club, pageNum)
-                    )
+        templates.headerHTML(club) + 
+        templates.navbarHTML(club, pageNum) +
+        templates.officerHTML(club, pageNum)
+    )
+
+def generate_catalog_page(clubs):
+    return templates.rootHTML({'name':'BLS Clubs Catalog'},
+        templates.catalogHeaderHTML() + 
+        templates.catalogHTML(clubs)
+    )
 
 def generate_club_pages():
     # loop through clubs and generate subdirectories with index.html files
+    with open('output/index.html','w') as file:
+        file.write(generate_catalog_page(clubs))
     for club in clubs:
         club_dir = 'output/' + club['name'].replace(' ','_')
         if not os.path.exists(club_dir):
@@ -48,7 +56,10 @@ def generate_club_pages():
 
         for pageNum in range(len(club['pages'])):
             page = club['pages'][pageNum]
-            with open(club_dir + '/' + page['name'] + '.html','w') as file:
+            sub_dir = club_dir + ('/' + page['name'].replace(' ','_') if page['name'] != 'Home' else '')
+            if not os.path.exists(sub_dir):
+                os.makedirs(sub_dir)
+            with open(sub_dir + '/index.html','w') as file:
                 if page['name'] == 'Officers': # Officers need different page generation
                     file.write(generate_officer_page(club, pageNum))
                     continue
