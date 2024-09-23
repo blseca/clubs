@@ -3,7 +3,7 @@ def rootHTML(club,content):
 <html>
 <head>
     <title>{club['name']}</title>
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="/style.css">
     <style>
         :root {{
             {'--background-color:'+club['theme']['background-color'] if 'theme' in club else ''};
@@ -55,9 +55,9 @@ def navbarHTML(club, pageNum):
     for i in range(len(club['pages'])):
         page = club['pages'][i]
         if i == pageNum:
-            output += f"\n\t<a href='{page['name']}.html' class='currentPage'>{page['name']}</a>"
+            output += f"\n\t<a href='./' class='currentPage'>{page['name']}</a>"
         else:
-            output += f"\n\t<a href='{page['name']}.html'>{page['name']}</a>"
+            output += f"\n\t<a href='/{club['name'].replace(' ','_')}/{page['name'] if page['name'] != 'Home' else '.'}/index.html'>{page['name']}</a>"
     return "\n<nav>" + output + "\n</nav>"
 
 def bodyHTML(club, pageNum):
