@@ -50,7 +50,7 @@ def generate_club_pages():
     with open('output/index.html','w') as file:
         file.write(generate_catalog_page(clubs))
     for club in clubs:
-        club_dir = 'output/' + club['name'].replace(' ','').lower()
+        club_dir = 'output/' + club['shortName'].replace(' ','').lower()
         if not os.path.exists(club_dir):
             os.makedirs(club_dir)
 

@@ -27,24 +27,15 @@ def headerHTML(club):
 </header>"""
 
 def clubTimesHTML(club):
-    weekly = club['times']['weekly']
-    str = ''
-    str += formatMeetingInfo('Monday',weekly['Monday'])
-    str += formatMeetingInfo('Tuesday',weekly['Tuesday'])
-    str += formatMeetingInfo('Wednesday',weekly['Wednesday'])
-    str += formatMeetingInfo('Thursday',weekly['Thursday'])
-    str += formatMeetingInfo('Friday',weekly['Friday'])
-    str += formatMeetingInfo('Saturday',weekly['Saturday'])
-    str += formatMeetingInfo('Sunday',weekly['Sunday'])
+    times = club['times']
+    str = ''.join(formatMeetingInfo(info) for info in times)
     return str
 
 def compactTimesHTML(club):
-    return "".join([f" <span class='compact-time'>{day}</span>" for day,info in club['times']['weekly'].items() if info['meet']])
+    return "".join([f" <span class='compact-time'>{info['day']}</span>" for info in club['times']])
 
-def formatMeetingInfo(day,time):
-    if not time['meet']: 
-        return ''
-    return f"<p>{day} &#149; {time['time']} { ' &#149; Room ' + str(time['room']) if 'room' in time else ''} { ' &#149; <a href=' + str(time['url']) + '>Join online meeting</a>' if 'url' in time else ''}</p>"
+def formatMeetingInfo(info):
+    return f"<p>{info['day']} &#149; {info['time']} { ' &#149; Room ' + str(info['room']) if 'room' in info else ''} { ' &#149; <a href=' + str(info['url']) + '>Join online meeting</a>' if 'url' in info else ''}</p>"
 
 def clubLinkHTML(club):
     for link in club['links']:
@@ -57,7 +48,7 @@ def navbarHTML(club, pageNum):
         if i == pageNum:
             output += f"\n\t<a href='./' class='currentPage'>{page['name']}</a>"
         else:
-            output += f"\n\t<a href='/{club['name'].replace(' ','').lower()}/{page['name'].replace(' ','').lower() if page['name'] != 'Home' else '.'}/'>{page['name']}</a>"
+            output += f"\n\t<a href='/{club['shortName'].replace(' ','').lower()}/{page['name'].replace(' ','').lower() if page['name'] != 'Home' else '.'}/'>{page['name']}</a>"
     return "\n<nav>" + output + "\n</nav>"
 
 def bodyHTML(club, pageNum):
@@ -96,7 +87,6 @@ def catalogHeaderHTML():
 def catalogHTML(clubs):
     output = ""
     for club in clubs:
-        name = club['name']
-        clubInfoHTML = f"<a class='club-item' href='{name.replace(' ','').lower()}'><h3>{name}</h3><p>{club['description']}{compactTimesHTML(club)}</p><a>"
+        clubInfoHTML = f"<a class='club-item' href='{club['shortName'].replace(' ','').lower()}'><h3>{club['name']}</h3><p>{club['description']}{compactTimesHTML(club)}</p><a>"
         output += clubInfoHTML
     return output

@@ -1,19 +1,20 @@
 {
     "name": "ECA",
     "fullName":"Extra-Curricular Association",
+    "shortName":"eca",
     "description": "Marketing, Design, and Website Club",
-    "times":{
-        "description": "Weekly attendence expected, either Tuesdays at 8pm, or Wednesdays at 2:15pm room 137",
-        "weekly": {
-            "Monday": {"meet":false},
-            "Tuesday": {"meet":true, "time": "8pm", "url": "https://discord.gg/bGqMpq87tQ"},
-            "Wednesday": {"meet":true, "time": "2:15pm", "room": 137},
-            "Thursday": {"meet":false},
-            "Friday": {"meet":false},
-            "Saturday": {"meet":false},
-            "Sunday": {"meet":false}
+    "times":[
+        {
+            "day": "Tuesday",
+            "time": "8pm",
+            "url": "https://discord.gg/bGqMpq87tQ"
+        },
+        {
+            "day": "Wednesday",
+            "time": "2:15pm",
+            "room": 137
         }
-    },
+    ],
     "theme": {
         "background-color": "#f9f4ff",
         "primary-color": "#000000",

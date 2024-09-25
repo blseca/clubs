@@ -1,19 +1,20 @@
 {
     "name": "History Club",
     "fullName":"BLS History Club",
+    "shortName": "history",
     "description": "Compete in History Bowl and History Bee, and Learn",
-    "times":{
-        "description": "",
-        "weekly": {
-            "Monday": {"meet":false},
-            "Tuesday": {"meet":false},
-            "Wednesday": {"meet":false},
-            "Thursday": {"meet":false},
-            "Friday": {"meet":true, "time": "2:15pm", "room": 18},
-            "Saturday": {"meet":false},
-            "Sunday": {"meet":false}
+    "times":[
+        {
+            "day":"Friday",
+            "time":"2:15pm",
+            "room":18
+        },
+        {
+            "day":"Friday",
+            "time":"8pm",
+            "url":"https://discord.gg/Gv7FX97xRt"
         }
-    },
+    ],
     "theme": {
         "background-color": "#ddbbfa",
         "primary-color": "#000000",
