@@ -143,6 +143,8 @@ main a:hover {
     transition: transform 0.2s, box-shadow 0.2s;
     pointer: pointer;
     text-decoration: none;
+    margin-top: 1em;
+
 }
 
 .club-item h3{

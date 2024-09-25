@@ -57,7 +57,7 @@ def navbarHTML(club, pageNum):
         if i == pageNum:
             output += f"\n\t<a href='./' class='currentPage'>{page['name']}</a>"
         else:
-            output += f"\n\t<a href='/{club['name'].replace(' ','_')}/{page['name'] if page['name'] != 'Home' else '.'}/index.html'>{page['name']}</a>"
+            output += f"\n\t<a href='/{club['name'].replace(' ','').lower()}/{page['name'].replace(' ','').lower() if page['name'] != 'Home' else '.'}/'>{page['name']}</a>"
     return "\n<nav>" + output + "\n</nav>"
 
 def bodyHTML(club, pageNum):
@@ -97,6 +97,6 @@ def catalogHTML(clubs):
     output = ""
     for club in clubs:
         name = club['name']
-        clubInfoHTML = f"<a class='club-item' href='{name}'><h3>{name}</h3><p>{club['description']}{compactTimesHTML(club)}</p><a>"
+        clubInfoHTML = f"<a class='club-item' href='{name.replace(' ','').lower()}'><h3>{name}</h3><p>{club['description']}{compactTimesHTML(club)}</p><a>"
         output += clubInfoHTML
     return output

@@ -1,0 +1,89 @@
+{
+    "name": "History Club",
+    "fullName":"BLS History Club",
+    "description": "Compete in History Bowl and History Bee, and Learn",
+    "times":{
+        "description": "",
+        "weekly": {
+            "Monday": {"meet":false},
+            "Tuesday": {"meet":false},
+            "Wednesday": {"meet":false},
+            "Thursday": {"meet":false},
+            "Friday": {"meet":true, "time": "2:15pm", "room": 18},
+            "Saturday": {"meet":false},
+            "Sunday": {"meet":false}
+        }
+    },
+    "theme": {
+        "background-color": "#ddbbfa",
+        "primary-color": "#000000",
+        "accent-color": "#6D2BC1"
+    },
+    "links": [
+        {
+           "name":"Discord",
+            "description": "Join our server!",
+            "url":"https://discord.gg/Gv7FX97xRt"
+        }
+    ],
+    "faculty": "Mrs. Stuppard",
+    "pages": [
+            {
+                "name": "Home",
+                "title": "Welcome to History Club!",
+                "body": "BLS History Club is the premier history club at BLS, and regularly hosts exciting events, with regular meetings and competitions. Our club is a great resume builder, and not to mention super fun and rewarding! We compete in the National History Bowl & Bee, as Academic Worldquest, earning Champion titles and qualifying in Nationals in both!",
+                "images":
+                [
+                    
+                ]
+            },
+            {
+                "name": "Officers",
+                "description": "",
+                "categories": [
+                    {
+                        "name": "Officers",
+                        "members": [
+                            {
+                                "name": "Will Liyuan",
+                                "position": "President"
+                            },
+                            {
+                                "name": "Kevin Wang",
+                                "position": "Co-President"
+                            },
+                            {
+                                "name": "Benjamin Leung",
+                                "position": "Officer"
+                            },
+                            {
+                                "name": "Luc Vulliez",
+                                "position": "Officer"
+                            },
+                            {
+                                "name": "Patrick Mcerlane",
+                                "position": "Officer"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "Images",
+                "title": "Past Competitions",
+                "body": "",
+                "images":
+                [
+                ]
+            },
+            {
+                "name": "History Bowl",
+                "title": "History Bowl",
+                "body": "History Bowl is a buzzer-based competition for students of all grades. We offer Varsity and JV divisions. With coaching from alumni and teachers with competition experience, we send well-prepared teams to state and national level qualifiers, culminating in the nationwide competition in DC. Our season is in the spring, from January to April. We welcome all to participate, and offer everyone who wishes a chance to compete.",
+                "images":
+                [
+                ]
+            }
+    ]
+    
+}
