@@ -15,7 +15,27 @@
 <header>
 <h1>Boston Latin School Clubs</h1>
 <p>Search here for a list of all clubs at blsclubs.org</p>
+<input type="text" id="search" placeholder="Search clubs...">
 </header>
 <a class='club-item' href='eca'><h3>ECA</h3><p>Marketing, Design, and Website Club <span class='compact-time'>Tuesday</span> <span class='compact-time'>Wednesday</span></p><a><a class='club-item' href='history'><h3>History Club</h3><p>Compete in History Bowl and History Bee, and Learn <span class='compact-time'>Friday</span> <span class='compact-time'>Friday</span></p><a>
+<script>
+function search() {
+    var input, filter, clubs, club, a, i, txtValue;
+    input = document.getElementById('search');
+    filter = input.value.toUpperCase();
+    clubs = document.getElementsByClassName('club-item');
+    for (i = 0; i < clubs.length; i++) {
+        club = clubs[i];
+        txtValue = club.textContent || clubs.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            club.style.display = '';
+        } else {
+            club.style.display = 'none';
+        }
+    }
+}
+document.getElementById('search').addEventListener('keyup', search);
+</script>
+
 </body>
 </html>

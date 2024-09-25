@@ -81,6 +81,7 @@ def catalogHeaderHTML():
 <header>
 <h1>Boston Latin School Clubs</h1>
 <p>Search here for a list of all clubs at blsclubs.org</p>
+<input type="search" id="search" placeholder="Search clubs, or weekdays">
 </header>
 """
 
@@ -89,4 +90,26 @@ def catalogHTML(clubs):
     for club in clubs:
         clubInfoHTML = f"<a class='club-item' href='{club['shortName'].replace(' ','').lower()}'><h3>{club['name']}</h3><p>{club['description']}{compactTimesHTML(club)}</p><a>"
         output += clubInfoHTML
-    return output
+    return output + searchScriptHTML()
+
+def searchScriptHTML():
+    return """
+<script>
+function search() {
+    var input, filter, clubs, club, a, i, txtValue;
+    input = document.getElementById('search');
+    filter = input.value.toUpperCase();
+    clubs = document.getElementsByClassName('club-item');
+    for (i = 0; i < clubs.length; i++) {
+        club = clubs[i];
+        txtValue = club.textContent || clubs.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            club.style.display = '';
+        } else {
+            club.style.display = 'none';
+        }
+    }
+}
+document.getElementById('search').addEventListener('keyup', search);
+</script>
+"""
