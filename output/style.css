@@ -183,6 +183,14 @@ main a:hover {
     padding: 0.5em 1em;
     display: block;
     border-radius: 50px;
-    border: 1px solid black;
+    border: none;
+    outline: 1px solid var(--accent-color);
     background-color: white;
+    width: 10em;
+    transition: width 0.3s ease, outline 0.3s ease;
+}
+
+#search:focus {
+    outline: 4px solid var(--accent-color);
+    width: 80%;
 }
