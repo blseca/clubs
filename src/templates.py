@@ -85,10 +85,13 @@ def catalogHeaderHTML():
 </header>
 """
 
-def catalogHTML(clubs):
+def catalogHTML(clubs, externalClubs = []):
     output = ""
-    for club in clubs:
-        clubInfoHTML = f"<a class='club-item' href='{club['shortName'].replace(' ','').lower()}'><h3>{club['name']}</h3><p>{club['description']}{compactTimesHTML(club)}</p><a>"
+    allClubs = clubs + externalClubs
+    allClubs.sort(key=lambda club: club['name'])
+    for club in allClubs:
+        url = club['externalLink'] if 'externalLink' in club else club['shortName'].replace(' ','').lower()
+        clubInfoHTML = f"<a class='club-item' href='{url}'><h3>{club['name']}</h3><p>{club['description']}</p><p>{compactTimesHTML(club)}</p><a>"
         output += clubInfoHTML
     return output + searchScriptHTML()
 

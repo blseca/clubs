@@ -8,10 +8,16 @@ import templates
 def read_json_files():
     clubs = []
     for filename in os.listdir('clubs'):
-        if filename.endswith('.json'):
+        if filename.endswith('.json') and filename != '[[[]]].json':
             with open('clubs/' + filename) as file:
                 clubs.append(json.load(file))
     return clubs
+
+def read_json_club_list():
+    #read the specific file [[[]]].json that contains a list of clubs to external websites
+    with open('clubs/[[[]]].json') as file:
+        return json.load(file)
+
 
 
 # ensure existence of clubs/ and output/ directories
@@ -24,6 +30,8 @@ def ensure_directories():
 ensure_directories()
 
 clubs = read_json_files()
+
+externalClubs = read_json_club_list()
 
 def generate_page(club, pageNum):
     return templates.rootHTML(club,
@@ -42,7 +50,7 @@ def generate_officer_page(club, pageNum):
 def generate_catalog_page(clubs):
     return templates.rootHTML({'name':'BLS Clubs Catalog'},
         templates.catalogHeaderHTML() + 
-        templates.catalogHTML(clubs)
+        templates.catalogHTML(clubs, externalClubs)
     )
 
 def generate_club_pages():

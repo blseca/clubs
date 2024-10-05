@@ -1,0 +1,41 @@
+[
+    {
+        "name": "Speech and Debate",
+        "shortName": "debate",
+        "description": "Compete in Public Forum, Lincoln Douglas, Congressional Debate, or Speech!",
+        "times": [
+            {
+                "day": "Tuesday",
+                "time": "2:30pm",
+                "room": 212
+            },
+            {
+                "day": "Thursday",
+                "time": "6:00pm",
+                "url": ""
+            }
+        ],
+        "externalLink": "https://debate.blsclubs.org"
+    },
+    {
+        "name": "Catapulta",
+        "shortName": "catapulta",
+        "description": "Science Journalism Magazine at Boston Latin School",
+        "times": [
+        ],
+        "externalLink": "https://catapulta.blsclubs.org"
+    },
+    {
+        "name": "VOTE",
+        "shortName": "vote",
+        "description": "Political News Magazine at Boston Latin School",
+        "times": [
+            {
+                "day": "Thursday",
+                "time": "2:30pm",
+                "room": "035"
+            }
+        ],
+        "externalLink": "https://vote.blsclubs.org"
+    }
+]

@@ -159,11 +159,12 @@ main a:hover {
 .club-item p{
     font-size: 1em;
     margin: 0.5em 0;
+    will-change: scale;
 }
 
 .club-item:hover{
-    transform: scale(0.98) translateY(0.5em);
-    box-shadow: 0px 3px 10px 0 rgba(0, 0, 0, 0.2);
+    transform: scale(0.99) translateY(0.2em);
+    box-shadow: 0px 5px 10px -4px rgba(0, 0, 0, 0.5);
 }
 
 .compact-time{
