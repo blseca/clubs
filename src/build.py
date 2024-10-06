@@ -11,6 +11,7 @@ def read_json_files():
         if filename.endswith('.json') and filename != '[[[]]].json':
             with open('clubs/' + filename) as file:
                 clubs.append(json.load(file))
+                print(filename + " ran successfully")
     return clubs
 
 def read_json_club_list():

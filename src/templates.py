@@ -7,9 +7,9 @@ def rootHTML(club,content):
     <link rel="stylesheet" href="/style.css">
     <style>
         :root {{
-            {'--background-color:'+club['theme']['background-color'] if 'theme' in club else ''};
-            {'--primary-color:'+club['theme']['primary-color'] if 'theme' in club else ''};
-            {'--accent-color:'+club['theme']['accent-color'] if 'theme' in club else ''};
+            --background-color: {club['theme']['background-color'] if 'theme' in club else '#f9f4ff'};
+            --primary-color: {club['theme']['primary-color'] if 'theme' in club else '#000000'};
+            --accent-color: {club['theme']['accent-color'] if 'theme' in club else '#6D2BC1'};
         }}
     </style>
 </head>

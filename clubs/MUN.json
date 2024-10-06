@@ -1,19 +1,11 @@
 {
     "name": "BLS MUN",
     "fullName":"Boston Latin School Model United Nations",
+    "shortName":"MUN",
     "description": "Boston Latin School Model United Nations",
-    "times":{
-        "description": "N/A ",
-        "weekly": {
-            "Monday": {"meet":false},
-            "Tuesday": {"meet":false},
-            "Wednesday": {"meet":false},
-            "Thursday": {"meet":false},
-            "Friday": {"meet":false},
-            "Saturday": {"meet":false},
-            "Sunday": {"meet":false}
-        }
-    },
+    "times":[
+
+    ],
     "links": [
         {
             "name":"Follow us on Instagram",
@@ -51,8 +43,7 @@
                 "title": "Contact us",
                 "body": "Follow Us: @bostonlatinmun<br/>For questions about conference registration, committees, position assignments, or anything else, please contact bostonlatinschoolmun@gmail.com",
                 "images":
-                [
-                ]
+                []
             }
     ]
     
