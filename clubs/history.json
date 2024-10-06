@@ -16,9 +16,9 @@
         }
     ],
     "theme": {
-        "background-color": "#ddbbfa",
+        "background-color": "#dbe8f5",
         "primary-color": "#000000",
-        "accent-color": "#6D2BC1"
+        "accent-color": "#0D2BC1"
     },
     "links": [
         {
@@ -29,62 +29,69 @@
     ],
     "faculty": "Mrs. Stuppard",
     "pages": [
-            {
-                "name": "Home",
-                "title": "Welcome to History Club!",
-                "body": "BLS History Club is the premier history club at BLS, and regularly hosts exciting events, with regular meetings and competitions. Our club is a great resume builder, and not to mention super fun and rewarding! We compete in the National History Bowl & Bee, as Academic Worldquest, earning Champion titles and qualifying in Nationals in both!",
-                "images":
-                [
-                    
-                ]
-            },
-            {
-                "name": "Officers",
-                "description": "",
-                "categories": [
-                    {
-                        "name": "Officers",
-                        "members": [
-                            {
-                                "name": "Will Liyuan",
-                                "position": "President"
-                            },
-                            {
-                                "name": "Kevin Wang",
-                                "position": "Co-President"
-                            },
-                            {
-                                "name": "Benjamin Leung",
-                                "position": "Officer"
-                            },
-                            {
-                                "name": "Luc Vulliez",
-                                "position": "Officer"
-                            },
-                            {
-                                "name": "Patrick Mcerlane",
-                                "position": "Officer"
-                            }
-                        ]
-                    }
-                ]
-            },
-            {
-                "name": "Images",
-                "title": "Past Competitions",
-                "body": "",
-                "images":
-                [
-                ]
-            },
-            {
-                "name": "History Bowl",
-                "title": "History Bowl",
-                "body": "History Bowl is a buzzer-based competition for students of all grades. We offer Varsity and JV divisions. With coaching from alumni and teachers with competition experience, we send well-prepared teams to state and national level qualifiers, culminating in the nationwide competition in DC. Our season is in the spring, from January to April. We welcome all to participate, and offer everyone who wishes a chance to compete.",
-                "images":
-                [
-                ]
-            }
-    ]
-    
+        {
+            "name": "Home",
+            "title": "Welcome to History Club!",
+            "body": "BLS History Club is the premier history club at BLS, and regularly hosts exciting events, with regular meetings and competitions. Our club is a great resume builder, and not to mention super fun and rewarding! We compete in the National History Bowl & Bee, as Academic Worldquest, earning Champion titles and qualifying in Nationals in both!",
+            "images":
+            [
+                
+            ]
+        },
+        {
+            "name": "Officers",
+            "description": "",
+            "categories": [
+                {
+                    "name": "Officers",
+                    "members": [
+                        {
+                            "name": "Will Liyuan",
+                            "position": "President"
+                        },
+                        {
+                            "name": "Kevin Wang",
+                            "position": "Co-President"
+                        },
+                        {
+                            "name": "Benjamin Leung",
+                            "position": "Officer"
+                        },
+                        {
+                            "name": "Luc Vulliez",
+                            "position": "Officer"
+                        },
+                        {
+                            "name": "Patrick Mcerlane",
+                            "position": "Officer"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "History Bowl",
+            "title": "History Bowl",
+            "body": "History Bowl is a buzzer-based competition for students of all grades. We offer Varsity and JV divisions. With coaching from alumni and teachers with competition experience, we send well-prepared teams to state and national level qualifiers, culminating in the nationwide competition in DC. Our season is in the spring, from January to April. We welcome all to participate, and offer everyone who wishes a chance to compete.",
+            "images":
+            [
+            ]
+        },
+        {
+            "name": "Quiz Bowl",
+            "title": "Quiz Bowl",
+            "body": "Quiz bowl is a game in which two teams compete head-to-head to answer questions from all areas of knowledge, including history, literature, science, fine arts, current events, popular culture, sports, and more. There are also tournaments for individual players rather than teams. <br> <br> The defining feature of quiz bowl is the use of a “buzzer system” that lets players interrupt the reading of a question when they know the answer. That element adds a dimension of confidence, anticipation, and rapid recall to a game about knowing facts. Those “tossup” questions are answered individually, but doing so earns one’s team a chance at a three-part “bonus” question. Bonus questions are worth more points and allow collaboration, but are generally more difficult.",
+            "images": [
+
+            ]
+        },
+        {
+            "name": "Methods of Study",
+            "title": "Methods of Study",
+            "body": "By no means the only way to study History Bowl, but here are some ideas on what you could do, whether you are experienced or not.  <h3> Focus </h3> <p> using time efficiently to dig deep into a specialization and become an expert in it. </p> <h2> Getting Started </h2><p>There are official topics that you need to know linked below. Look up what to study in your particular specialization.</p> <h2>Initial steps</h2><p>    Keeping in mind your specialization, find the resources on the History Bowl tab, and search on the internet. Reading far and wide as well as in depth is helpful. Crash Course is probably superficial by this point, so find articles or videos that explains the area in depth.     </p><h2> Studying</h2><p>Memorize and maybe take notes. Watch specific videos if it enhances your understanding of an event or person. (2x speed w/ captions)</p><p>Make flashcards(if that helps), and learn details. There are also premade quizlet sets. </p><h2> Practice</h2><p>Come to Practices(Virtual or In-Person)</p><p>Do Sample Problems from websites on your own. <ul><li>Try to get them as quickly as possible, reading from the top. Protobowl or Qbreader are useful for this</li><li>When encountering 3rd quarter sets relating to your expertise, try to know the first three questions for sure, and have reasonable guesses for 3 more.</li></ul></p><h2> Next Steps</h2><p>    Read into weak spots that come up, or if clarification is needed from one of the problems. For persistent areas, read in detail and watch people explain it in videos.</p><p>    Once you have a good grip on your specialty, you can try to tackle a lesser category. Perhaps tack on a bit of Literary History, Sports, or Music!! </p><h2> Before The Competition</h2><p>With your team:</p><ul>    <li>Know when and where it is</li>    <li>Understanding what each player is good at</li>    <li>Figure out strategies for buzzing</li></ul><p>By yourself: do what you think you need to do to be successful in the competition! See above</p><p>Eat a good breakfast. Get a good night's sleep! </p><h2> After The Competition</h2><p>    Debrief. Evaluate objectively how you did and what you can improve upon. </p><p>    Build a bit of time into the week to watch some fun History videos, or a book. It will help you next time!</p><p>    If you want, take some challenging history classes, like APWH or APUSH at school!</p>" ,
+            "images": [
+
+            ]
+        }
+    ]    
 }

@@ -24,7 +24,7 @@ img {
 }
 
 a {
-    color: #6D2BC1;
+    color: var(--accent-color);
 }
 
 body {
@@ -60,7 +60,7 @@ header p{
 
 #all-clubs{
     padding: 0 0.5em;
-    background-color: #6D2BC1;
+    background-color: var(--accent-color);
     color: white;
     position: absolute;
     top: 2em;
