@@ -1,0 +1,59 @@
+{
+    "name": "BLS MUN",
+    "fullName":"Boston Latin School Model United Nations",
+    "description": "Boston Latin School Model United Nations",
+    "times":{
+        "description": "N/A ",
+        "weekly": {
+            "Monday": {"meet":false},
+            "Tuesday": {"meet":false},
+            "Wednesday": {"meet":false},
+            "Thursday": {"meet":false},
+            "Friday": {"meet":false},
+            "Saturday": {"meet":false},
+            "Sunday": {"meet":false}
+        }
+    },
+    "links": [
+        {
+            "name":"Follow us on Instagram",
+            "description": "Instagram",
+            "url":"https://www.instagram.com/bostonlatinmun/"
+        }
+    ],
+    "faculty": "???",
+    "pages": [
+            {
+                "name": "Welcome",
+                "title": "Welcome to Model Un!",
+                "body": "Thank you for visiting the website of Boston Latin School Model United Nations! We are pleased to announce that we will be hosting our 3rd annual Model United Nations conference on <b>Saturday, November 23, 2024</b>, at Boston Latin School (<i>78 Avenue Louis Pasteur, Boston, MA 02115</i>). On this site, you can find important conference updates, contact information, and directions to our school. We look forward to seeing you soon!",
+                "images":
+                []
+
+            },
+            {
+                "name": "BLSMUN III",
+                "title": "BLSMUN III",
+                "body": "Our Secretariat is dedicated to providing an educational, engaging, and affordable experience for Model UN delegates of all skill levels. We will be providing five committees, listed below. <b>Boston Latin School Model United Nations is excited to be offering a novice committee this year, in addition to four other committees.</b> The committee will be guided, at a slower pace, and heavily staffed in order to teach beginners and/or those completely new to Model United Nations. We strive to produce an inclusive environment for delegates at all stages of their Model United Nations journey and are extremely excited to work with both new and experienced delegates.<br/>*position papers will be released October 21st, 2024<br/><ol><li>Nuclear Non-Proliferation (General Assembly 1: DISEC - <b><i>Novice</i></b>)</li><li>China Belt & Road Initiative (General Assembly 2: Specialized - <b><i>Recommended for more advanced delegates</i></b>)</li><li>Human Rights (Economic and Social Council 1: OHCHR)</li><li>Women in STEM (Economic and Social Council 2: CSW)</li><li>The Great War (Security Council 1)</li></ol>",
+                "images":
+                []
+            },
+            {
+                "name": "Registration",
+                "title": "Registration",
+                "body": "To begin the registration process, <b>please fill out this <a href=\"https://docs.google.com/forms/d/e/1FAIpQLSdW_eV25ULMwGXL5KQYkGTxMTUhwMniE46lP7JrAYMcDBpd9Q/viewform\">Google Form</a></b>, which requests your delegation’s size and committee preferences. The secretariat will follow up with an invoice and details about who to make the check out to. <br/></br/>Registration on the day of the conference will start at <b>8:00AM</b> and the award ceremony will end around <b>4:00PM</b>. Breakfast and lunch will be provided at no charge to delegates. <b>A chaperone must be present throughout the day</b>.<br/><br/>Payment:<br/>$20 per delegate<br/>No delegation fee<br/><br/>*If the delegate fees are cost prohibitive for your students/MUN program, please reach out, and we will work with you to solve any issues.<br/><br/><br/><b>Conference timeline</b></br><b>October 14, 2024</b> - Registration form is due. <br/><b>October 21, 2024</b> - Committee assignments and background guides released.<br/><b>November 10, 2024</b> - Payment is due. <br/><b>November 23, 2024</b> - BLS Model UN conference from 8:00AM - 4:00PM.",
+                "images":
+                []
+            },
+
+            {
+                "name": "Contact",
+                "title": "Contact us",
+                "body": "Follow Us: @bostonlatinmun<br/>For questions about conference registration, committees, position assignments, or anything else, please contact bostonlatinschoolmun@gmail.com",
+                "images":
+                [
+                ]
+            }
+    ]
+    
+}
