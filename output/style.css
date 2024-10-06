@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 :root {
     --background-color: #f9f4ff;
+    --accent-color: #6D2BC1;
 }
 html, body {
     margin: 0;
@@ -23,7 +24,7 @@ img {
 }
 
 a {
-    color: #6D2BC1;
+    color: var(--accent-color);
 }
 
 body {
@@ -59,7 +60,7 @@ header p{
 
 #all-clubs{
     padding: 0 0.5em;
-    background-color: #6D2BC1;
+    background-color: var(--accent-color);
     color: white;
     position: absolute;
     top: 2em;
@@ -92,11 +93,25 @@ nav .currentPage {
     border-bottom: 1px solid transparent;
 }
 
-main {
+main, .club-item{
     padding: 2em;
     background-color: white;
     border: 1px solid black;
     box-shadow: 0px 8px 20px 0 rgba(0, 0, 0, 0.2);
+}
+
+main a {
+    background-color: #6D2BC1;
+    color: white;
+    display: inline-block;
+    padding: 0.1em 0.5em;
+    margin: -0.1em 0;
+    border-radius: 1em;
+    text-decoration: none;
+}
+
+main a:hover {
+    background-color: #4A1A7D;
 }
 
 @media screen and (max-width: 600px) {
@@ -119,6 +134,64 @@ main {
         border-left: none;
         border-right: none;
     }
-    
 }
 
+.club-item{
+    padding: 1em;
+    display: block;
+    color: var(--primary-color);
+    transition: transform 0.2s, box-shadow 0.2s;
+    pointer: pointer;
+    text-decoration: none;
+    margin-top: 1em;
+
+}
+
+.club-item h3{
+    font-size: 2em;
+    margin: 0;
+}
+
+.club-item:hover h3 {
+    text-decoration: underline;
+}
+
+.club-item p{
+    font-size: 1em;
+    margin: 0.5em 0;
+    will-change: scale;
+}
+
+.club-item:hover{
+    transform: scale(0.99) translateY(0.2em);
+    box-shadow: 0px 5px 10px -4px rgba(0, 0, 0, 0.5);
+}
+
+.compact-time{
+    background-color: var(--accent-color);
+    color: white;
+    font-weight: bold;
+    display: inline-block;
+    padding: 0.2em 0.5em;
+    border-radius: 1em;
+    margin: -0.2em 0;
+    margin-left: 0.3em;
+}
+
+#search {
+    font-size: 1em;
+    font-family: inherit;
+    padding: 0.5em 1em;
+    display: block;
+    border-radius: 50px;
+    border: none;
+    outline: 1px solid var(--accent-color);
+    background-color: white;
+    width: 10em;
+    transition: width 0.3s ease, outline 0.3s ease;
+}
+
+#search:focus {
+    outline: 4px solid var(--accent-color);
+    width: 80%;
+}

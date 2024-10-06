@@ -1,40 +1,47 @@
 {
     "name": "ECA",
     "fullName":"Extra-Curricular Association",
+    "shortName":"eca",
     "description": "Marketing, Design, and Website Club",
-    "times":{
-        "description": "Weekly attendence expected, either Tuesdays at 8pm, or Wednesdays at 2:15pm room 137",
-        "weekly": {
-            "Monday": {"meet":false},
-            "Tuesday": {"meet":true, "time": "8pm", "url": "https://example.com"},
-            "Wednesday": {"meet":true, "time": "2:15pm", "room": 137},
-            "Thursday": {"meet":false},
-            "Friday": {"meet":false},
-            "Saturday": {"meet":false},
-            "Sunday": {"meet":false}
+    "times":[
+        {
+            "day": "Tuesday",
+            "time": "8pm",
+            "url": "https://discord.gg/bGqMpq87tQ"
+        },
+        {
+            "day": "Wednesday",
+            "time": "2:15pm",
+            "room": 137
         }
+    ],
+    "theme": {
+        "background-color": "#f9f4ff",
+        "primary-color": "#000000",
+        "accent-color": "#6D2BC1"
     },
     "links": [
         {
+            "name":"Instagram",
+            "description": "Follow us!",
+            "url":"https://www.instagram.com/bls.eca?igsh=OTZtYTRkcjF4ZHFj&utm_source=qr"
+        },
+        {
             "name":"Discord",
-            "description": "join our server!",
+            "description": "Join our server!",
             "url":"https://discord.gg/t6WMBBAwBM"
         }
     ],
     "faculty": "Dr. Mordine",
     "pages": [
             {
-                "name": "Welcome",
+                "name": "Home",
                 "title": "Welcome to the ECA!",
-                "body": "The ECA provides services for the Boston Latin School club community, helping clubs establish a presence and brand identity through posters and websites",
+                "body": "The ECA provides services for the Boston Latin School club community, helping clubs establish a presence and brand identity through posters and websites. <br> <br> If you wish to request a website, poster, or logo for your club, just fill out: <a href='https://forms.gle/1PLwyeF2umyiQ9xQA' target='_blank'>this form</a> <br> <br> If you wish to join the ECA, <a href='https://forms.gle/tArom33pPniHsvtp6' target='_blank'>sign up</a>",
                 "images":
                 [
-                    {
-                        "url": "https://i.pinimg.com/564x/9d/4a/49/9d4a49b2b2b9392d3f844c4dbcff52d6.jpg",
-                        "alt": "Funny cat"
-                    }
+                    
                 ]
-
             },
             {
                 "name": "Officers",
@@ -54,15 +61,49 @@
                         ]
                     },
                     {
-                        "name": "Web Design Officers",
+                        "name": "Web Development",
                         "members": [
                             {
                                 "name": "David Wang",
-                                "position": "Web design officer"
+                                "position": "Website officer"
                             },
                             {
                                 "name": "Victor Lee",
-                                "position": "AAAHHHHHH"
+                                "position": "Website officer"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Design"  ,
+                        "members": [
+                            {
+                                "name": "Rajika Bajgain",
+                                "position": "Senior Design officer"
+                            },
+                            {
+                                "name": "Alexa Schmitt",
+                                "position": "Design officer"
+                            },
+                            {
+                                "name": "Constance Fang",
+                                "position": "Design officer"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "External Relations",
+                        "members": [
+                            {
+                                "name": "Rajika Bajgain",
+                                "position": "Public Relations officer"
+                            },
+                            {
+                                "name": "Alexa Schmitt",
+                                "position": "Communications officer"
+                            },
+                            {
+                                "name": "Thomas Germain",
+                                "position": "Communications officer"
                             }
                         ]
                     }
@@ -74,24 +115,12 @@
                 "body": "Here are some of our finished projects for different clubs at BLS",
                 "images":
                 [
-                    {
-                        "url": "https://ih1.redbubble.net/image.3501532519.3883/raf,360x360,075,t,fafafa:ca443f4786.u1.jpg",
-                        "alt": "Funny cat"
-                    },
-                    {
-                        "url": "https://thumbor.bigedition.com/funniest-cats-internet/IFuBq6cGzboq-79yUziXTZkYtw0=/0x13:800x614/480x360/filters:format(webp):quality(80)/granite-web-prod/cc/fa/ccfa37b8659442e9a994fe07d0534ac8.jpeg",
-                        "alt": "Funny cat 2"
-                    },
-                    {
-                        "url": "https://i.pinimg.com/564x/9d/4a/49/9d4a49b2b2b9392d3f844c4dbcff52d6.jpg",
-                        "alt": "Funny cat 3"
-                    }
                 ]
             },
             {
                 "name": "Events",
                 "title": "Come check us out at the extracurricular fair!",
-                "body": "Pretty please join our club",
+                "body": "We will be there 9/24 and 9/25, come say hi!",
                 "images":
                 [
                 ]

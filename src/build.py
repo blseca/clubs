@@ -8,10 +8,16 @@ import templates
 def read_json_files():
     clubs = []
     for filename in os.listdir('clubs'):
-        if filename.endswith('.json'):
+        if filename.endswith('.json') and filename != '[[[]]].json':
             with open('clubs/' + filename) as file:
                 clubs.append(json.load(file))
     return clubs
+
+def read_json_club_list():
+    #read the specific file [[[]]].json that contains a list of clubs to external websites
+    with open('clubs/[[[]]].json') as file:
+        return json.load(file)
+
 
 
 # ensure existence of clubs/ and output/ directories
@@ -25,32 +31,43 @@ ensure_directories()
 
 clubs = read_json_files()
 
+externalClubs = read_json_club_list()
+
 def generate_page(club, pageNum):
-    title = club['name']
-    return templates.rootHTML(title,
-                    templates.headerHTML(club) + 
-                    templates.navbarHTML(club, pageNum) +
-                    templates.bodyHTML(club, pageNum)
-                    )
+    return templates.rootHTML(club,
+        templates.headerHTML(club) + 
+        templates.navbarHTML(club, pageNum) +
+        templates.bodyHTML(club, pageNum)
+    )
 
 def generate_officer_page(club, pageNum):
-    title = club['name']
-    return templates.rootHTML(title,
-                    templates.headerHTML(club) + 
-                    templates.navbarHTML(club, pageNum) +
-                    templates.officerHTML(club, pageNum)
-                    )
+    return templates.rootHTML(club,
+        templates.headerHTML(club) + 
+        templates.navbarHTML(club, pageNum) +
+        templates.officerHTML(club, pageNum)
+    )
+
+def generate_catalog_page(clubs):
+    return templates.rootHTML({'name':'BLS Clubs Catalog'},
+        templates.catalogHeaderHTML() + 
+        templates.catalogHTML(clubs, externalClubs)
+    )
 
 def generate_club_pages():
     # loop through clubs and generate subdirectories with index.html files
+    with open('output/index.html','w') as file:
+        file.write(generate_catalog_page(clubs))
     for club in clubs:
-        club_dir = 'output/' + club['name'].replace(' ','_')
+        club_dir = 'output/' + club['shortName'].replace(' ','').lower()
         if not os.path.exists(club_dir):
             os.makedirs(club_dir)
 
         for pageNum in range(len(club['pages'])):
             page = club['pages'][pageNum]
-            with open(club_dir + '/' + page['name'] + '.html','w') as file:
+            sub_dir = club_dir + ('/' + page['name'].replace(' ','').lower() if page['name'] != 'Home' else '')
+            if not os.path.exists(sub_dir):
+                os.makedirs(sub_dir)
+            with open(sub_dir + '/index.html','w') as file:
                 if page['name'] == 'Officers': # Officers need different page generation
                     file.write(generate_officer_page(club, pageNum))
                     continue
