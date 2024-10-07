@@ -139,7 +139,7 @@ main a:hover {
 .club-item{
     padding: 1em;
     display: block;
-    color: var(--primary-color);
+    color: black;
     transition: transform 0.2s, box-shadow 0.2s;
     pointer: pointer;
     text-decoration: none;
