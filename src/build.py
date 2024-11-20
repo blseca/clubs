@@ -52,7 +52,7 @@ def generate_catalog_page(clubs):
     return templates.rootHTML({'name':'BLS Clubs Catalog'},
         templates.catalogHeaderHTML() + 
         templates.catalogHTML(clubs, externalClubs)
-    )
+    , opts={'site-class':'catalog'})
 
 def generate_club_pages():
     # loop through clubs and generate subdirectories with index.html files

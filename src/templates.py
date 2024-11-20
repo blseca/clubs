@@ -1,6 +1,6 @@
-def rootHTML(club,content):
+def rootHTML(club,content, opts = {}):
     return f"""<!DOCTYPE html>
-<html>
+<html class="{opts['site-class'] if 'site-class' in opts else ''}">
 <head>
     <title>{club['name']}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1"> 
@@ -33,10 +33,10 @@ def clubTimesHTML(club):
     return str
 
 def compactTimesHTML(club):
-    return "".join([f" <span class='compact-time'>{info['day']}</span>" for info in club['times']])
+    return "".join([f" <span class='compact-time {info['day']}'>{info['day']}</span>" for info in club['times']])
 
 def formatMeetingInfo(info):
-    return f"<p>{info['day']} &#149; {info['time']} { ' &#149; Room ' + str(info['room']) if 'room' in info else ''} { ' &#149; <a href=' + str(info['url']) + '>Join online meeting</a>' if 'url' in info else ''}</p>"
+    return f"<p class={info['day']}>{info['day']} &#149; {info['time']} { ' &#149; Room ' + str(info['room']) if 'room' in info else ''} { ' &#149; <a href=' + str(info['url']) + '>Join online meeting</a>' if 'url' in info else ''}</p>"
 
 def clubLinkHTML(club):
     for link in club['links']:

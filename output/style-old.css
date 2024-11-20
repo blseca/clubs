@@ -1,17 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
-
 :root {
     --background-color: #f9f4ff;
     --accent-color: #6D2BC1;
 }
 html, body {
     margin: 0;
-    font-family: 'Inter', sans-serif;
-    line-height: 1.5;
-}
-
-html{
+    font-family: 'IBM Plex Sans', sans-serif;
     background-color: var(--background-color);
 }
 
@@ -24,6 +18,7 @@ img {
     height: auto;
     border: 1px solid black;
     border-radius: 50px;
+
     margin: 0 -0.3em;
     margin-bottom: 1em;
 }
@@ -32,21 +27,13 @@ a {
     color: var(--accent-color);
 }
 
-p{
-    font-size: 1.1em;
-}
 body {
+    /* margin: 2em 100px;  */
     max-width: 700px;
     margin: 0 auto;
     padding: 2em;
-    z-index: 1;
-    position: relative
+    /* font-size: 3vmin; */
 }
-
-.catalog{
-    background-color: rgb(255, 255, 255);
-}
-
 header {
     text-align: right;
 }
@@ -65,6 +52,7 @@ header p.description{
 }
 
 header p{
+    font-size: 1em;
     margin: 0.5em 0;
     text-transform: uppercase;
 }
@@ -80,9 +68,36 @@ header p{
     transform: rotate(-20deg);
 }
 
+
+nav {
+    margin: 0.5em 0;
+    margin-left: 0.5em;
+    width: 100%;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    background-color: white;
+    padding: 0.4em;
+    padding-right: 1em;
+    font-style: italic;
+    margin-left: 0.5em;
+    border: 1px solid black;
+    display: inline-block;
+}
+
 nav .currentPage {
     font-weight: bolder;
+    transform: translateY(calc(0.5em + 1px));
+    border-bottom: 1px solid transparent;
+}
+
+main, .club-item{
+    padding: 2em;
     background-color: white;
+    border: 1px solid black;
+    box-shadow: 0px 8px 20px 0 rgba(0, 0, 0, 0.2);
 }
 
 main a {
@@ -110,6 +125,10 @@ main a:hover {
         display: block;
         margin: 0.5em 0;
     }
+    nav .currentPage {
+        border: 1px solid black;
+        transform: translateY(0);
+    }
     main {
         margin: 0 -2em;
         border-left: none;
@@ -117,70 +136,10 @@ main a:hover {
     }
 }
 
-nav {
-    margin: 0.5em 0;
-    margin-left: 0.5em;
-    width: 100%;
-}
-
-nav a {
-    text-decoration: none;
-    color: black;
-    background-color: rgba(0,0,0,0.1);
-    border: 1px solid var(--accent-color);
-    backdrop-filter: saturate(280%);
-    padding: 0.4em;
-    padding-right: 1em;
-    font-style: italic;
-    margin-left: 0.5em;
-    display: inline-block;
-}
-
-main, .club-item{
-    padding: 2em;
-    background-color: white;
-}
-
-main {
-    border: 1px solid var(--accent-color);
-    position: relative;
-}
-
-main::after {
-    content: '';
-    display: block;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    background-color: white;
-    border: 1px solid var(--accent-color);
-    opacity: 0.5;
-    z-index: -1;
-}
-
-main::before {
-    content: '';
-    display: block;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    background-color: white;
-    border: 1px solid var(--accent-color);
-    opacity: 0.3;
-    z-index: -1;
-}
-
 .club-item{
-    border-radius: 0px;
     padding: 1em;
     display: block;
     color: black;
-    background-color:var(--background-color);
-    border: 1px solid var(--accent-color);
     transition: transform 0.2s, box-shadow 0.2s;
     pointer: pointer;
     text-decoration: none;
@@ -193,6 +152,10 @@ main::before {
     margin: 0;
 }
 
+.club-item:hover h3 {
+    text-decoration: underline;
+}
+
 .club-item p{
     font-size: 1em;
     margin: 0.5em 0;
@@ -200,8 +163,8 @@ main::before {
 }
 
 .club-item:hover{
-    transform: scale(0.99) translate(-5px, -5px);
-    box-shadow: 10px 10px 0px 0px var(--accent-color);
+    transform: scale(0.99) translateY(0.2em);
+    box-shadow: 0px 5px 10px -4px rgba(0, 0, 0, 0.5);
 }
 
 .compact-time{
@@ -210,27 +173,25 @@ main::before {
     font-weight: bold;
     display: inline-block;
     padding: 0.2em 0.5em;
-    border-radius: 50px;
-    margin: -0.2em 0.4em;
-    margin-left: -0.2em;
+    border-radius: 1em;
+    margin: -0.2em 0;
+    margin-left: 0.3em;
 }
 
 #search {
-    font-size: 1.2em;
+    font-size: 1em;
     font-family: inherit;
     padding: 0.5em 1em;
-    margin-left: -1px;
     display: block;
     border-radius: 50px;
     border: none;
-    outline: 0px solid var(--accent-color);
-    background-color: rgba(0,0,0,0.1);
-    backdrop-filter: saturate(280%);
+    outline: 1px solid var(--accent-color);
+    background-color: white;
     width: 10em;
     transition: width 0.3s ease, outline 0.3s ease;
 }
 
-#search:focus, #search:hover {
+#search:focus {
     outline: 4px solid var(--accent-color);
     width: 80%;
 }
