@@ -1,0 +1,32 @@
+{
+    "name": "Robotics Club",
+    "fullName": "BLS Robotics Club",
+    "shortName": "robotics",
+    "description": "Construct robots and compete in competitions",
+    "times": [
+        {
+            "day": "Tuesday",
+            "time": "2:15pm",
+            "room": "3rd Floor Closet"
+        },
+        {
+            "day": "Thursday",
+            "time": "2:15pm",
+            "room": "3rd Floor Closet"
+        }
+    ],
+    "theme": {
+        "background-color": "#ffe5d6",
+        "primary-color": "#000000",
+        "accent-color": "#ff5252"
+    },
+    "links": [],
+    "pages": [
+        {
+            "name": "Home",
+            "title": "BLS Robotics Home",
+            "body": "Isotech 23461 is an First Tech Challenge (FTC) team founded in 2023 and based out of Boston Latin School, the oldest public school in the United States. We are all passionate for what we do: whether it be design, build, programming, or outreach, we do our best to spread the wonder of robotics everywhere. At our competitive school, each individual member may be busy with many other things, but in the end we all come together with our work to represent the best STEM ability of Boston Latin. We strive to make the most of the resources we get, but we give back to the community we work in through workshops and lessons. As we continue to grow as a team, we remain committed to innovation, collaboration, and sharing our passion for robotics with others.As we continue to grow as a team, we remain committed to innovation, collaboration, and sharing our passion for robotics with others."
+        }
+    ]
+
+}

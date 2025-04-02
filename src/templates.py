@@ -41,6 +41,7 @@ def formatMeetingInfo(info):
 def clubLinkHTML(club):
     for link in club['links']:
         return f"<p><a href='{link['url']}' title='{link['description']}'>{link['name']}</a></p>"
+    return ""
 
 def navbarHTML(club, pageNum):
     output = ""
@@ -59,8 +60,9 @@ def bodyHTML(club, pageNum):
 <h1>{page['title']}</h1>
 <p>{page['body']}</p>
 """
-    for image in page['images']:
-        output += f"<img src='{image['url']}' alt='{image['alt']}'>\n"
+    if 'images' in page:
+        for image in page['images']:
+            output += f"<img src='{image['url']}' alt='{image['alt']}'>\n"
     return output + "\n</main>"
 
 def officerHTML(club, pageNum):
@@ -80,8 +82,8 @@ def officerHTML(club, pageNum):
 def catalogHeaderHTML():
     return """
 <header>
-<h1>Boston Latin School Clubs</h1>
-<p>Search here for a list of all clubs at blsclubs.org</p>
+<h1>Boston Latin School Club Catalog</h1>
+<br>
 <input type="search" id="search" placeholder="Search clubs, or weekdays">
 </header>
 """

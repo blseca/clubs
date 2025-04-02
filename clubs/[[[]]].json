@@ -37,5 +37,13 @@
             }
         ],
         "externalLink": "https://vote.blsclubs.org"
+    },
+    {
+        "name": "Model UN",
+        "shortName": "mun",
+        "description": "Model United Nations at Boston Latin School",
+        "times": [],
+        "externalLink": "https://mun.blsclubs.org"
+
     }
 ]

@@ -215,6 +215,34 @@ main::before {
     margin-left: -0.2em;
 }
 
+.compact-time.Monday{
+    background-color: #FF1111;
+}
+
+.compact-time.Tuesday{
+    background-color: #eb861a;
+}
+
+.compact-time.Wednesday{
+    background-color: #68b058;
+}
+
+.compact-time.Thursday{
+    background-color: #5bb7c9;
+}
+
+.compact-time.Friday{
+    background-color: #5b68c9;
+}
+
+.compact-time.Saturday{
+    background-color: #c763e0;
+}
+
+.compact-time.Sunday{
+    background-color: #e063b0;
+}
+
 #search {
     font-size: 1.2em;
     font-family: inherit;
